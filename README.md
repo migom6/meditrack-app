@@ -4,3 +4,5 @@
 `npm i` <br>
 `npm start` <br>
 >scan the QR code with expo app available at PLAY store <br>
+### for OSX users <br>
+>press `i` in the command line after `npm start` to run on i os simulator 
