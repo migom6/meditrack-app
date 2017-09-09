@@ -1,18 +1,35 @@
 import React , {Component} from 'react';
 import { View } from 'react-native'
 import { Navigator } from './screens/Navigator'
+import Login from './screens/Login' 
 
 export default class App extends Component {
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
-      'Roboto': require('native-base/Fonts/Roboto.ttf'),
-      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-    });
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false, 
+      auth: false
+    }
+  }
+
+  _onLogin = () => {
+    this.setState({
+      auth : true
+    })
   }
   
   render() {
-    return (
+    if(!this.state.loading && this.state.auth){
+      return (
         <Navigator/>  
-    );
+      );
+    }
+    if(!this.state.loading && !this.state.auth){
+      return (
+        <Login _onLogin = {this._onLogin} />  
+      );
+    }
+    
   }
 }
