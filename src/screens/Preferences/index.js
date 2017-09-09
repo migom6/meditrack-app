@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Button, View, StyleSheet, Text, Linking } from 'react-native'
+import {Button, View, StyleSheet, Text} from 'react-native'
+import Titlebar from './../Titlebar'
 
 export default class Prefences extends Component {
   
@@ -10,9 +11,8 @@ export default class Prefences extends Component {
   
   render() {
     return (
-      <View>  
-        <Text> made with react-native </Text>
-        <Text onPress = {this._handlePress}> By migom6</Text>
+      <View>
+        <Titlebar/>
       </View>
     );
   }
