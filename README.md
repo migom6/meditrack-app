@@ -1,5 +1,5 @@
 
-#getting started with the app
+# Getting started with the app
 `git clone` <br>
 `npm i` <br>
 `npm start` <br>
