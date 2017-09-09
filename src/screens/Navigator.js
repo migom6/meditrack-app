@@ -2,21 +2,49 @@ import {
     TabNavigator,
   } from 'react-navigation';
  
-import Screen1 from './screen1';
-import Screen2 from './screen2';
+import Schedule from './Schedule';
+import Connect from './Connect';
+import Receipt from './Receipt';
+import Statistics from './Statistics';
+import Preferences from './Preferences';
 
 
 export const Navigator = TabNavigator({
-    Screen1: {
-        screen: Screen1,
+    Schedule: {
+        screen: Schedule,
         navigationOptions: {
-            title: 'Screen1',
+            title: 'Schedule',
           },
     },
-    Screen2: {
-        screen: Screen2,
+    Connect: {
+        screen: Connect,
         navigationOptions: {
-            title: 'Screen2',
+            title: 'Connect',
           },
+    },
+    Receipt: {
+        screen: Receipt,
+        navigationOptions: {
+            title: 'Receipt',
+          },
+    },
+    Statistics: {
+        screen: Statistics,
+        navigationOptions: {
+            title: 'Statistics',
+          },
+    },
+    Preferences: {
+        screen: Preferences,
+        navigationOptions: {
+            title: 'Preferences',
+          },
+    },
+},
+{
+    tabBarPosition: 'bottom',
+    animationEnabled: true,
+    tabBarOptions: {
+    activeTintColor: 'black',
     },
 });

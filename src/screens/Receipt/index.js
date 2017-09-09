@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, View, StyleSheet, Text, Linking } from 'react-native'
 
-export default class Screen2 extends Component {
+export default class Receipt extends Component {
 
     _handlePress = () => {
         Linking.openURL("http://github.com/migom6");
