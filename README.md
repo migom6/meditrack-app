@@ -1,4 +1,4 @@
->git clone 
->npm i
->npm start 
->scan the QR code with expo app available at PLAY store
+>git clone <br>
+>npm i <br>
+>npm start <br>
+>scan the QR code with expo app available at PLAY store <br>
