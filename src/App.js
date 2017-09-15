@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
-import { View } from 'react-native'
+import { View, Text, Image } from 'react-native'
+import {Font} from 'expo'
 import { Navigator } from './screens/Navigator'
 import Login from './screens/Login' 
 
@@ -12,7 +13,13 @@ export default class App extends Component {
       auth: false
     }
   }
-
+  componentDidMount() {
+    Font.loadAsync({
+      'bold': require('./assets/fonts/Gotham-Rounded-Bold.otf'),
+      'book': require('./assets/fonts/Gotham-Rounded-Book.otf'),
+      
+    });
+  }
   _onLogin = () => {
     this.setState({
       auth : true
@@ -27,9 +34,10 @@ export default class App extends Component {
     }
     if(!this.state.loading && !this.state.auth){
       return (
-        <Login _onLogin = {this._onLogin} />  
+          <Login _onLogin = {this._onLogin} />  
       );
-    }
-    
+    }   
   }
 }
+
+

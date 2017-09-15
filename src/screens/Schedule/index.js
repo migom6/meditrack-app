@@ -1,15 +1,30 @@
 import React, {Component} from 'react';
-import {Button, View} from 'react-native';
-import Titlebar from './../Titlebar'
+import {Button, View, Text, StyleSheet} from 'react-native';
+import { Constants } from 'expo';
 
-export default class Schedule extends Component {
-    
+import Titlebar from './../Titlebar'
+import Panel1 from './Panel1' 
+// import Panel2 from './Panel2' 
+// import Panel3 from './Panel3' 
+// import Panel4 from './Panel4' 
+// import Panel5 from './Panel5' 
+
+export default class Schedule extends Component {  
+    constructor(props){
+        super(props)
+    } 
     render() {
-        const { navigate } = this.props.navigation;
         return (
-            <View> 
+            <View style = {styles.container}> 
                 <Titlebar/>
+                <Panel1/>               
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        paddingTop: 70
+    }
+})
