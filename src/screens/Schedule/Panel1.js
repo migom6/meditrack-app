@@ -1,52 +1,60 @@
-import React, { Component } from 'react';
-import { Text, TouchableOpacity, View, Button, StyleSheet } from 'react-native';
-import DateTimePicker from 'react-native-modal-datetime-picker';
+import React, { Component } from 'react'
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 
 export default class Panel1 extends Component {
-    
-    constructor(props){
-        super(props)
-        this.state = {
-            isDateTimePickerVisible: false,
-        };
-    }  
-    
-    
-    _showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
-    
-    _hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
-    
-    _handleDatePicked = (date) => {
-        console.log('A date has been picked: ', date);
-        this._hideDateTimePicker();
-    };
-    
-    render () {
-        return (
-            <View>
-                <Button
-                onPress={()=>{
-                    console.log("edit")
-                }}
-                title="Add new"
-                color="#841584"
-                accessibilityLabel="Add new"
-                />
-                <Button
-                onPress={this._showDateTimePicker}
-                title="Date"
-                color="#841584"
-                accessibilityLabel="date picker"
-                />
-                <DateTimePicker
-                isVisible={this.state.isDateTimePickerVisible}
-                onConfirm={this._handleDatePicked}
-                onCancel={this._hideDateTimePicker}
-                />
-            
-            </View>
-        );
-    }
-    
+   state = {
+      names: [
+         {
+            id: 0,
+            name: 'Ben',
+         },
+         {
+            id: 1,
+            name: 'Susan',
+         },
+         {
+            id: 2,
+            name: 'Robert',
+         },
+         {
+            id: 3,
+            name: 'Mary',
+         }
+      ]
+   }
+   alertItemName = (item) => {
+      alert(item.name)
+   }
+   render() {
+      return (
+         <View> 
+            {
+               this.state.names.map((item, index) => (
+                  <TouchableOpacity
+                     key = {item.id}
+                     style = {styles.container}
+                     onPress = {() => this.alertItemName(item)}>
+                     
+                     <Text style = {styles.text}>
+                        {item.name}
+                     </Text>
+                  </TouchableOpacity>
+               ))
+            }
+         </View>
+      )
+   }
 }
 
+
+const styles = StyleSheet.create ({
+   container: {
+      padding: 10,
+      marginTop: 3,
+      backgroundColor: '#d9f9b1',
+      alignItems: 'center',
+   },
+   text: {
+      color: '#4f603c'
+   }
+})
