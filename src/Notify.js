@@ -28,7 +28,7 @@ export default class App extends Component {
           t.setSeconds(t.getSeconds() + 10);
           const schedulingOptions = {
               time: t, // (date or number) — A Date object representing when to fire the notification or a number in Unix epoch time. Example: (new Date()).getTime() + 1000 is one second from now.
-              repeat: 'minute'
+              repeat: 'hour'
             };
         Notifications.scheduleLocalNotificationAsync(localNotification, schedulingOptions)
     }
