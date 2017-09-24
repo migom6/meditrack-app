@@ -45,7 +45,7 @@ export const Navigator = TabNavigator({
     tabBarPosition: 'bottom',
     animationEnabled: true,
     tabBarOptions: {
-    activeTintColor: '#555',
+    activeTintColor: 'blue',
     labelStyle: {
     fontSize: 12,
     color: 'black'
