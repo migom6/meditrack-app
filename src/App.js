@@ -11,7 +11,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       loading: false, 
-      auth: false
+      auth: true
     }
   }
   componentDidMount() {
