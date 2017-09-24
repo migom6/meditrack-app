@@ -37,7 +37,6 @@ export default class Panel2 extends Component {
         }
         
         return <Image
-        style={{width: 50, height: 50}}
         source={path}
         />
     }
@@ -64,7 +63,6 @@ export default class Panel2 extends Component {
                     <View style={styles.text}>
                     {this.getImage(item.medicine.type)}
                     <Text>{item.medicine.name}</Text>
-                    <Text>{item.medicine.type}</Text>
                     </View>
                     </TouchableOpacity>
                 ))

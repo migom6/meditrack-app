@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Button, View, Text, StyleSheet} from 'react-native';
 import { Constants } from 'expo';
-import ActionButton from 'react-native-action-button';
 
 
 import Titlebar from './../Titlebar'
@@ -21,11 +20,7 @@ export default class Schedule extends Component {
                 <Titlebar/>
                 <Panel1/>  
                 <Panel2/>
-                <Panel3/> 
-                <ActionButton
-                    buttonColor="rgba(231,76,60,1)"
-                    onPress={() => { console.log("hi")}}
-                />            
+                <Panel3/>         
             </View>
         );
     }
