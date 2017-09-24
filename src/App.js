@@ -1,8 +1,9 @@
 import React , {Component} from 'react';
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image,StatusBar } from 'react-native'
 import {Font} from 'expo'
 import { Navigator } from './screens/Navigator'
 import Login from './screens/Login' 
+import Notify from './Notify'
 
 export default class App extends Component {
 
@@ -29,7 +30,10 @@ export default class App extends Component {
   render() {
     if(!this.state.loading && this.state.auth){
       return (
-        <Navigator/>  
+        <View style={{flex:1}}> 
+          <Navigator/>  
+          <Notify/>
+        </View>
       );
     }
     if(!this.state.loading && !this.state.auth){

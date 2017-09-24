@@ -45,6 +45,17 @@ export const Navigator = TabNavigator({
     tabBarPosition: 'bottom',
     animationEnabled: true,
     tabBarOptions: {
-    activeTintColor: 'black',
+    activeTintColor: '#555',
+    labelStyle: {
+    fontSize: 12,
+    color: 'black'
+  },
+  tabStyle: {
+    width: 100,    
+  },
+  style: {
+    backgroundColor: '#F5F5F5',
+    borderTopWidth: 1,
+  },
     },
 });

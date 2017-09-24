@@ -3,12 +3,13 @@ import {Button, View, Text, StyleSheet} from 'react-native';
 import { Constants } from 'expo';
 
 
+
 import Titlebar from './../Titlebar'
 import Panel1 from './Panel1' 
 import Panel2 from './Panel2' 
 import Panel3 from './Panel3' 
-// import Panel4 from './Panel4' 
-// import Panel5 from './Panel5' 
+
+import Fab from './Fab'
 
 export default class Schedule extends Component {  
     constructor(props){
@@ -20,7 +21,8 @@ export default class Schedule extends Component {
                 <Titlebar/>
                 <Panel1/>  
                 <Panel2/>
-                <Panel3/>         
+                <Panel3/>
+                <Fab style = {{flex: 1}}/>         
             </View>
         );
     }
@@ -29,6 +31,8 @@ export default class Schedule extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 70
+        paddingTop: 70, 
+        backgroundColor: '#FAFAFA',
+        justifyContent: 'flex-start',
     }
 })

@@ -5,7 +5,7 @@ export default class Titlebar extends Component {
     return(
       <Header  
       centerComponent={{ text: 'Meditrack', style: { color: '#fff' } }} 
-      backgroundColor = {'skyblue'}
+      backgroundColor = {'#0098FF'}
       />
     )
   }
