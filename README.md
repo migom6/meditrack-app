@@ -1,5 +1,7 @@
+# MEDITRACK
+Android and i-os app to keep track of your daily medicines
 
-# Getting started with the app
+## Getting started with the app
 `git clone https://github.com/himanshub16/meditrack.git` <br>
 `npm i` <br>
 `npm start` <br>
